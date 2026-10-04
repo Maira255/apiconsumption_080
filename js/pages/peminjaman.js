@@ -68,7 +68,7 @@ async function detailPeminjaman(id) {
         <tr><th>Dibuat</th><td>${d.created_at}</td></tr>
       </table>
     `;
-    $('#detailModal').modal('show');
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('detailModal')).show();
   } catch (error) {
     console.error('Gagal mengambil detail peminjaman:', error);
     alert('Gagal mengambil detail peminjaman.');
@@ -91,7 +91,7 @@ document.getElementById('btnAdd').addEventListener('click', async function () {
       '<option value="">-- Pilih Asset --</option>' +
       asset.map(a => `<option value="${a.id}">${a.nama_asset} (stok ${a.jumlah})</option>`).join('');
 
-    $('#formModal').modal('show');
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('formModal')).show();
   } catch (error) {
     console.error('Gagal membuka form:', error);
     alert('Gagal membuka form peminjaman.');
@@ -121,7 +121,7 @@ form.addEventListener('submit', async function (e) {
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
     alert('Peminjaman berhasil ditambahkan!');
-    $('#formModal').modal('hide');
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('formModal')).hide();
     getPeminjaman();
   } catch (error) {
     console.error('Gagal menambahkan peminjaman:', error);

@@ -1,6 +1,0 @@
-$kind: http-request
-url: "{{base_url}}/produk/detail.php?id=1"
-method: GET
-queryParams:
-  id: "1"
-order: 2000

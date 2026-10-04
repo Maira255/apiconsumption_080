@@ -45,7 +45,7 @@ a {
   height: 2.75rem;
   text-align: center;
   color: $white;
-  background: fade-out($gray-800, .5);
+  background: fade-out($gray-800, 0.5);
   line-height: 46px;
   &:focus,
   &:hover {
@@ -58,3 +58,8 @@ a {
     font-weight: 800;
   }
 }
+
+
+// Samakan gaya tabel dengan Bootstrap 4 (tanpa garis atas tebal di bawah thead)
+.table > :not(:first-child) { border-top: 0; }
+.table-bordered thead th { border-bottom-width: 2px; }

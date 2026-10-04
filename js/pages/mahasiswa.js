@@ -50,7 +50,7 @@ document.getElementById('btnAdd').addEventListener('click', function () {
   form.reset();
   document.getElementById('recordId').value = '';
   document.getElementById('formModalTitle').textContent = 'Tambah Mahasiswa';
-  $('#formModal').modal('show');
+  bootstrap.Modal.getOrCreateInstance(document.getElementById('formModal')).show();
 });
 
 // Tampilkan form edit
@@ -64,7 +64,7 @@ function editMahasiswa(id) {
   document.getElementById('email').value = m.email;
   document.getElementById('telepon').value = m.telepon;
   document.getElementById('formModalTitle').textContent = 'Edit Mahasiswa';
-  $('#formModal').modal('show');
+  bootstrap.Modal.getOrCreateInstance(document.getElementById('formModal')).show();
 }
 
 // CREATE & UPDATE
@@ -91,7 +91,7 @@ form.addEventListener('submit', async function (e) {
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
     alert(id ? 'Mahasiswa berhasil diperbarui!' : 'Mahasiswa berhasil ditambahkan!');
-    $('#formModal').modal('hide');
+    bootstrap.Modal.getOrCreateInstance(document.getElementById('formModal')).hide();
     getMahasiswa();
   } catch (error) {
     console.error('Gagal menyimpan mahasiswa:', error);
