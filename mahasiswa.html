@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Master Mahasiswa - Peminjaman Asset</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"></ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topbar"></nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Master Mahasiswa</h1>
+                        <button class="btn btn-primary btn-sm shadow-sm" id="btnAdd"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Mahasiswa</button>
+                    </div>
+                                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr style="text-align: center">
+                                            <th>ID</th>
+                                            <th>NIM</th>
+                                            <th>Nama</th>
+                                            <th>Jurusan</th>
+                                            <th>Angkatan</th>
+                                            <th>Email</th>
+                                            <th>Telepon</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Peminjaman Asset</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <form class="modal-content" id="formModalForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModalTitle">Tambah Mahasiswa</h5>
+                    <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="recordId">
+                    <div class="form-group"><label for="nim">NIM</label><input type="text" class="form-control" id="nim" required></div>
+                    <div class="form-group"><label for="nama">Nama</label><input type="text" class="form-control" id="nama" required></div>
+                    <div class="form-group"><label for="jurusan">Jurusan</label><input type="text" class="form-control" id="jurusan" required></div>
+                    <div class="form-group"><label for="angkatan">Angkatan</label><input type="number" min="2000" class="form-control" id="angkatan" required></div>
+                    <div class="form-group"><label for="email">Email</label><input type="email" class="form-control" id="email" required></div>
+                    <div class="form-group"><label for="telepon">Telepon</label><input type="tel" class="form-control" id="telepon" required></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <button class="btn btn-primary" type="submit">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>renderLayout('mahasiswa');</script>
+    <script src="js/pages/mahasiswa.js"></script>
+</body>
+
+</html>

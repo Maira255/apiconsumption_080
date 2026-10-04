@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Transaksi Peminjaman - Peminjaman Asset</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar"></ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topbar"></nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Transaksi Peminjaman</h1>
+                        <button class="btn btn-primary btn-sm shadow-sm" id="btnAdd"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Peminjaman</button>
+                    </div>
+                                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr style="text-align: center">
+                                            <th>ID</th>
+                                            <th>NIM</th>
+                                            <th>Nama Mahasiswa</th>
+                                            <th>Asset</th>
+                                            <th>Jumlah</th>
+                                            <th>Tanggal Pinjam</th>
+                                            <th>Tanggal Kembali</th>
+                                            <th>Status</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto"><span>Peminjaman Asset</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <form class="modal-content" id="formModalForm">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Peminjaman</h5>
+                    <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group"><label for="id_mahasiswa">Mahasiswa</label><select class="form-control" id="id_mahasiswa" required></select></div>
+                    <div class="form-group"><label for="id_asset">Asset</label><select class="form-control" id="id_asset" required></select></div>
+                    <div class="form-group"><label for="jumlah">Jumlah</label><input type="number" min="1" value="1" class="form-control" id="jumlah" required></div>
+                    <div class="form-group"><label for="tanggal_pinjam">Tanggal Pinjam</label><input type="date" class="form-control" id="tanggal_pinjam" required></div>
+                    <div class="form-group"><label for="tanggal_kembali">Tanggal Kembali</label><input type="date" class="form-control" id="tanggal_kembali" required></div>
+                    <div class="form-group"><label for="keterangan">Keterangan</label><textarea class="form-control" id="keterangan" rows="2"></textarea></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                    <button class="btn btn-primary" type="submit">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detail Peminjaman</h5>
+                    <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body" id="detailBody"></div>
+                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-dismiss="modal">Tutup</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>renderLayout('peminjaman');</script>
+    <script src="js/pages/peminjaman.js"></script>
+</body>
+
+</html>
