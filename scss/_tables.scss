@@ -1,0 +1,31 @@
+// Tabel data: tanpa garis kotak, header berwarna utama, baris belang + hover
+.table-modern {
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  thead th {
+    background-color: $primary;
+    color: #fff;
+    border: 0;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .06rem;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:first-child { border-top-left-radius: .35rem; }
+    &:last-child { border-top-right-radius: .35rem; }
+  }
+
+  tbody td {
+    border-top: 0;
+    border-bottom: 1px solid rgba($primary, .12);
+    vertical-align: middle;
+  }
+
+  &.table-striped tbody tr:nth-of-type(odd) { background-color: rgba($primary, .05); }
+  &.table-hover tbody tr:hover { background-color: rgba($primary, .12); }
+}

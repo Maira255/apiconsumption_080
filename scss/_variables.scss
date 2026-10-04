@@ -16,7 +16,7 @@ $gray-800: #5a5c69 !default;
 $gray-900: #3a3b45 !default;
 $black: #000 !default;
 
-$blue: #4e73df !default;
+$blue: #7c3aed !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
@@ -79,16 +79,3 @@ $dropdown-border-color: $border-color !default;
 $login-image: 'https://source.unsplash.com/K4mSJ7kc0As/600x800' !default;
 $register-image: 'https://source.unsplash.com/Mv9hjnEUHR4/600x800' !default;
 $password-image: 'https://source.unsplash.com/oWTW-jNGl9I/600x800' !default;
-
-// Samakan ukuran dasar dengan Bootstrap 4 agar tampilan halaman identik dengan SB Admin 2 asli
-$card-spacer-y: 1.25rem !default;
-$card-spacer-x: 1.25rem !default;
-$card-cap-padding-y: .75rem !default;
-$card-cap-padding-x: 1.25rem !default;
-$table-cell-padding-y: .75rem !default;
-$table-cell-padding-x: .75rem !default;
-$modal-inner-padding: 1rem !default;
-$modal-header-padding-y: 1rem !default;
-$modal-header-padding-x: 1rem !default;
-$table-cell-padding-y-sm: .3rem !default;
-$table-cell-padding-x-sm: .3rem !default;

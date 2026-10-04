@@ -50,7 +50,7 @@ document.getElementById('btnAdd').addEventListener('click', function () {
   form.reset();
   document.getElementById('recordId').value = '';
   document.getElementById('formModalTitle').textContent = 'Tambah Asset';
-  bootstrap.Modal.getOrCreateInstance(document.getElementById('formModal')).show();
+  $('#formModal').modal('show');
 });
 
 // Tampilkan form edit
@@ -64,7 +64,7 @@ function editAsset(id) {
   document.getElementById('lokasi').value = a.lokasi;
   document.getElementById('status').value = a.status;
   document.getElementById('formModalTitle').textContent = 'Edit Asset';
-  bootstrap.Modal.getOrCreateInstance(document.getElementById('formModal')).show();
+  $('#formModal').modal('show');
 }
 
 // CREATE & UPDATE
@@ -91,7 +91,7 @@ form.addEventListener('submit', async function (e) {
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
     alert(id ? 'Asset berhasil diperbarui!' : 'Asset berhasil ditambahkan!');
-    bootstrap.Modal.getOrCreateInstance(document.getElementById('formModal')).hide();
+    $('#formModal').modal('hide');
     getAsset();
   } catch (error) {
     console.error('Gagal menyimpan asset:', error);

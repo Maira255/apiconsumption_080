@@ -25,9 +25,9 @@
                         <button class="btn btn-primary btn-sm shadow-sm" id="btnAdd"><i class="fas fa-plus fa-sm text-white-50"></i> Tambah Asset</button>
                     </div>
                                     <div class="card shadow mb-4">
-                        <div class="card-body">
+                        <div class="card-body p-0">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-modern table-striped table-hover" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr style="text-align: center">
                                             <th>ID</th>
@@ -63,25 +63,25 @@
             <form class="modal-content" id="formModalForm">
                 <div class="modal-header">
                     <h5 class="modal-title" id="formModalTitle">Tambah Asset</h5>
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button class="close" type="button" data-dismiss="modal"><span>&times;</span></button>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" id="recordId">
-                    <div class="mb-3"><label class="form-label" for="nama_asset">Nama Asset</label><input type="text" class="form-control" id="nama_asset" required></div>
-                    <div class="mb-3"><label class="form-label" for="kategori">Kategori</label><input type="text" class="form-control" id="kategori" required></div>
-                    <div class="mb-3"><label class="form-label" for="jumlah">Jumlah</label><input type="number" min="0" class="form-control" id="jumlah" required></div>
-                    <div class="mb-3"><label class="form-label" for="kondisi">Kondisi</label>
-                        <select class="form-select" id="kondisi" required>
+                    <div class="form-group"><label for="nama_asset">Nama Asset</label><input type="text" class="form-control" id="nama_asset" required></div>
+                    <div class="form-group"><label for="kategori">Kategori</label><input type="text" class="form-control" id="kategori" required></div>
+                    <div class="form-group"><label for="jumlah">Jumlah</label><input type="number" min="0" class="form-control" id="jumlah" required></div>
+                    <div class="form-group"><label for="kondisi">Kondisi</label>
+                        <select class="form-control" id="kondisi" required>
                             <option>Baik</option><option>Rusak Ringan</option><option>Rusak Berat</option>
                         </select></div>
-                    <div class="mb-3"><label class="form-label" for="lokasi">Lokasi</label><input type="text" class="form-control" id="lokasi" required></div>
-                    <div class="mb-3"><label class="form-label" for="status">Status</label>
-                        <select class="form-select" id="status" required>
+                    <div class="form-group"><label for="lokasi">Lokasi</label><input type="text" class="form-control" id="lokasi" required></div>
+                    <div class="form-group"><label for="status">Status</label>
+                        <select class="form-control" id="status" required>
                             <option>Tersedia</option><option>Dipinjam</option>
                         </select></div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Batal</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
                     <button class="btn btn-primary" type="submit">Simpan</button>
                 </div>
             </form>
